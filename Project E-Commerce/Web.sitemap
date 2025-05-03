@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+	<!-- Root node: your home/browse page -->
+	<siteMapNode url="~/WebForm1.aspx" title="Browse Books">
+		<!-- Child nodes: each must be a different page -->
+		<siteMapNode url="~/WebForm2.aspx" title="Book Details" />
+		<siteMapNode url="~/WebForm3.aspx" title="My Cart" />
+		<siteMapNode url="~/WebForm4.aspx" title="Checkout" />
+		<siteMapNode url="~/WebForm5.aspx" title="Confirmation" />
+	</siteMapNode>
+</siteMap>

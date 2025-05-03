@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site.Master.cs"
+    Inherits="Project_E_Commerce.Site1" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+
+    <link runat="server"
+          href="~/Styles/StyleSheet1.css"
+          rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <header>
+                <div class="navbar">
+                    <h1 class="logo">
+                        <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="~/WebForm1.aspx">
+                            BookBarn
+                        </asp:HyperLink>
+                    </h1>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                    <asp:Menu ID="MainMenu" runat="server"
+                              DataSourceID="SiteMapDataSource1"
+                              Orientation="Horizontal"
+                              StaticDisplayLevels="2"
+                              CssClass="main-menu" />
+                    <asp:Label ID="lblCartCount" runat="server" CssClass="cart-badge" Text="Cart: 0" />
+
+    <asp:SiteMapDataSource ID="SiteMapDataSource2" runat="server" />
+    <asp:Menu ID="MainMenu" … />
+                </div>
+            </header>
+
+            <nav class="breadcrumbs">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" &gt; " />
+            </nav>
+
+            <main class="content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </main>
+
+            <footer>
+                <p>Aban Alfaify - 202200484</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
